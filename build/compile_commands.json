@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/marin/Documents/HRI_Seminar/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\leapc_example.dir\\leapc_main.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\leapc_main.c",
+  "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\leapc_main.c",
+  "output": "CMakeFiles\\leapc_example.dir\\leapc_main.c.obj"
+},
+{
+  "directory": "C:/Users/marin/Documents/HRI_Seminar/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\libExampleConnection.dir\\ExampleConnection.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\ExampleConnection.c",
+  "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\ExampleConnection.c",
+  "output": "CMakeFiles\\libExampleConnection.dir\\ExampleConnection.c.obj"
+},
+{
+  "directory": "C:/Users/marin/Documents/HRI_Seminar/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\PollingSample.dir\\PollingSample.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\PollingSample.c",
+  "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\PollingSample.c",
+  "output": "CMakeFiles\\PollingSample.dir\\PollingSample.c.obj"
+}
+]
