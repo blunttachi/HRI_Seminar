@@ -87,4 +87,5 @@ function(add_sample sample_name sample_source_file)
 endfunction()
 
 add_sample("PollingSample" "PollingSample.c")
+add_sample("Seminar" "Seminar.c")
 

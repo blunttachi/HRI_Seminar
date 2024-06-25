@@ -1,6 +1,18 @@
 # ninja log v6
 13	709	7409451196461578	CMakeFiles/leapc_example.dir/leapc_main.c.obj	559a75357c8ba06c
-715	1945	7409451203489901	leapc_example.exe	82146f4eb3b17e9f
-36	2120	7409532713046122	CMakeFiles/PollingSample.dir/PollingSample.c.obj	48dabb3bae140726
+12	243	7410408933797422	leapc_example.exe	e15a87ce729a0f18
+10	517	7410445002700039	CMakeFiles/PollingSample.dir/PollingSample.c.obj	48dabb3bae140726
 24	984	7409451196577778	CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj	7a4170cdfcf92d10
-2122	2368	7409532733916503	PollingSample.exe	d1ce87671a341bcc
+10	504	7410450895207822	CMakeFiles/Seminar.dir/Seminar.c.obj	acef866de1e12a98
+10	75	7410451240664502	PollingSample.exe	69c21b9c2560e4b6
+504	564	7410450900151712	Seminar.exe	7f1d379796291e99
+10	484	7410451610669897	CMakeFiles/PollingSample.dir/PollingSample.c.obj	48dabb3bae140726
+485	546	7410451615418502	PollingSample.exe	69c21b9c2560e4b6
+10	486	7410451980000433	CMakeFiles/PollingSample.dir/PollingSample.c.obj	48dabb3bae140726
+487	549	7410451984762492	PollingSample.exe	69c21b9c2560e4b6
+10	551	7410454005051270	CMakeFiles/Seminar.dir/Seminar.c.obj	acef866de1e12a98
+552	626	7410454010473669	Seminar.exe	7f1d379796291e99
+13	512	7410454794449028	CMakeFiles/Seminar.dir/Seminar.c.obj	acef866de1e12a98
+512	577	7410454799446176	Seminar.exe	7f1d379796291e99
+14	488	7410458744019141	CMakeFiles/Seminar.dir/Seminar.c.obj	acef866de1e12a98
+489	552	7410458748764080	Seminar.exe	7f1d379796291e99

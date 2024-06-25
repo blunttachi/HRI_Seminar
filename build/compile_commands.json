@@ -16,5 +16,11 @@
   "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\PollingSample.dir\\PollingSample.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\PollingSample.c",
   "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\PollingSample.c",
   "output": "CMakeFiles\\PollingSample.dir\\PollingSample.c.obj"
+},
+{
+  "directory": "C:/Users/marin/Documents/HRI_Seminar/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\Seminar.dir\\Seminar.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar.c",
+  "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar.c",
+  "output": "CMakeFiles\\Seminar.dir\\Seminar.c.obj"
 }
 ]
