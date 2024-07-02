@@ -66,9 +66,9 @@ build CMakeFiles/leapc_example.dir/leapc_main.c.obj: C_COMPILER__leapc_example_u
 
 build leapc_example.exe: C_EXECUTABLE_LINKER__leapc_example_Debug CMakeFiles/leapc_example.dir/leapc_main.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib
   FLAGS = -g
-  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\leapc_example.dir
-  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake.exe" -E copy "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.dll" C:/Users/marin/Documents/HRI_Seminar/build"
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake.exe" -E copy "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.dll" C:/Users/marin/Documents/HRI_Seminar/build"
   PRE_LINK = cd .
   TARGET_FILE = leapc_example.exe
   TARGET_IMPLIB = libleapc_example.dll.a
@@ -123,7 +123,7 @@ build CMakeFiles/PollingSample.dir/PollingSample.c.obj: C_COMPILER__PollingSampl
 
 build PollingSample.exe: C_EXECUTABLE_LINKER__PollingSample_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/PollingSample.dir/PollingSample.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
   FLAGS = -g
-  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PollingSample.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -157,7 +157,7 @@ build CMakeFiles/Seminar.dir/Seminar.c.obj: C_COMPILER__Seminar_unscanned_Debug 
 
 build Seminar.exe: C_EXECUTABLE_LINKER__Seminar_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/Seminar.dir/Seminar.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
   FLAGS = -g
-  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Seminar.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -165,12 +165,46 @@ build Seminar.exe: C_EXECUTABLE_LINKER__Seminar_Debug CMakeFiles/libExampleConne
   TARGET_IMPLIB = libSeminar.dll.a
   TARGET_PDB = Seminar.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Seminar2
+
+
+#############################################
+# Order-only phony target for Seminar2
+
+build cmake_object_order_depends_target_Seminar2: phony || cmake_object_order_depends_target_libExampleConnection
+
+build CMakeFiles/Seminar2.dir/Seminar2.c.obj: C_COMPILER__Seminar2_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/Seminar2.c || cmake_object_order_depends_target_Seminar2
+  DEP_FILE = CMakeFiles\Seminar2.dir\Seminar2.c.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Users/marin/Documents/HRI_Seminar -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
+  OBJECT_DIR = CMakeFiles\Seminar2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Seminar2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Seminar2
+
+
+#############################################
+# Link the executable Seminar2.exe
+
+build Seminar2.exe: C_EXECUTABLE_LINKER__Seminar2_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/Seminar2.dir/Seminar2.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
+  FLAGS = -g
+  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Seminar2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Seminar2.exe
+  TARGET_IMPLIB = libSeminar2.dll.a
+  TARGET_PDB = Seminar2.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\marin\Documents\HRI_Seminar -BC:\Users\marin\Documents\HRI_Seminar\build"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\marin\Documents\HRI_Seminar -BC:\Users\marin\Documents\HRI_Seminar\build"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -182,7 +216,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\marin\Documents\HRI_Seminar -BC:\Users\marin\Documents\HRI_Seminar\build"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\marin\Documents\HRI_Seminar -BC:\Users\marin\Documents\HRI_Seminar\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -196,6 +230,8 @@ build PollingSample: phony PollingSample.exe
 
 build Seminar: phony Seminar.exe
 
+build Seminar2: phony Seminar2.exe
+
 build leapc_example: phony leapc_example.exe
 
 # =============================================================================
@@ -206,7 +242,7 @@ build leapc_example: phony leapc_example.exe
 #############################################
 # Folder: C:/Users/marin/Documents/HRI_Seminar/build
 
-build all: phony leapc_example.exe libExampleConnection PollingSample.exe Seminar.exe
+build all: phony leapc_example.exe libExampleConnection PollingSample.exe Seminar.exe Seminar2.exe
 
 # =============================================================================
 # Built-in targets

@@ -22,5 +22,11 @@
   "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\Seminar.dir\\Seminar.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar.c",
   "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar.c",
   "output": "CMakeFiles\\Seminar.dir\\Seminar.c.obj"
+},
+{
+  "directory": "C:/Users/marin/Documents/HRI_Seminar/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IC:/Users/marin/Documents/HRI_Seminar -isystem \"C:/Program Files/Ultraleap/LeapSDK/include\" -g -o CMakeFiles\\Seminar2.dir\\Seminar2.c.obj -c C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar2.c",
+  "file": "C:\\Users\\marin\\Documents\\HRI_Seminar\\Seminar2.c",
+  "output": "CMakeFiles\\Seminar2.dir\\Seminar2.c.obj"
 }
 ]

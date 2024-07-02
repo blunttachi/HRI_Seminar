@@ -28,7 +28,9 @@ add_executable(
 target_link_libraries(
 	leapc_example
 	PRIVATE
-		LeapSDK::LeapC)
+		LeapSDK::LeapC
+		-lwsock32
+		-lws2_32)
 
 get_target_property(
 	LEAPC_IMPORTED_CONFIG
@@ -59,7 +61,9 @@ add_library(
 target_link_libraries(
 	libExampleConnection
 	PUBLIC
-	LeapSDK::LeapC)
+	LeapSDK::LeapC
+	-lwsock32
+	-lws2_32)
 
 if (UNIX)
 	target_link_libraries(
@@ -88,4 +92,5 @@ endfunction()
 
 add_sample("PollingSample" "PollingSample.c")
 add_sample("Seminar" "Seminar.c")
+add_sample("Seminar2" "Seminar2.c")
 
