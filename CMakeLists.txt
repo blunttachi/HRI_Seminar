@@ -80,7 +80,7 @@ target_include_directories(
 # Add targets for each sample file.
 function(add_sample sample_name sample_source_file)
 
-  add_executable(${sample_name} ${sample_source_file})
+add_executable(${sample_name} ${sample_source_file})
   set_property(TARGET ${sample_name} PROPERTY FOLDER "Samples")
   if(NOT WIN32)
 	target_link_libraries(${sample_name} PUBLIC libExampleConnection m)
@@ -90,7 +90,5 @@ function(add_sample sample_name sample_source_file)
 
 endfunction()
 
-add_sample("PollingSample" "PollingSample.c")
 add_sample("Seminar" "Seminar.c")
-add_sample("Seminar2" "Seminar2.c")
 

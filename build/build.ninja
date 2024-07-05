@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: leapc_example
-# Configurations: Debug
+# Configurations: 
 # =============================================================================
 
 #############################################
@@ -20,11 +20,6 @@
 
 ninja_required_version = 1.5
 
-
-#############################################
-# Set configuration variable for custom commands.
-
-CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,12 +44,13 @@ cmake_ninja_workdir = C$:/Users/marin/Documents/HRI_Seminar/build/
 
 build cmake_object_order_depends_target_leapc_example: phony || .
 
-build CMakeFiles/leapc_example.dir/leapc_main.c.obj: C_COMPILER__leapc_example_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/leapc_main.c || cmake_object_order_depends_target_leapc_example
+build CMakeFiles/leapc_example.dir/leapc_main.c.obj: C_COMPILER__leapc_example_unscanned_ C$:/Users/marin/Documents/HRI_Seminar/leapc_main.c || cmake_object_order_depends_target_leapc_example
   DEP_FILE = CMakeFiles\leapc_example.dir\leapc_main.c.obj.d
-  FLAGS = -g
   INCLUDES = -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
   OBJECT_DIR = CMakeFiles\leapc_example.dir
   OBJECT_FILE_DIR = CMakeFiles\leapc_example.dir
+  TARGET_COMPILE_PDB = CMakeFiles\leapc_example.dir\
+  TARGET_PDB = leapc_example.pdb
 
 
 # =============================================================================
@@ -64,15 +60,15 @@ build CMakeFiles/leapc_example.dir/leapc_main.c.obj: C_COMPILER__leapc_example_u
 #############################################
 # Link the executable leapc_example.exe
 
-build leapc_example.exe: C_EXECUTABLE_LINKER__leapc_example_Debug CMakeFiles/leapc_example.dir/leapc_main.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib
-  FLAGS = -g
+build leapc_example.exe: C_EXECUTABLE_LINKER__leapc_example_ CMakeFiles/leapc_example.dir/leapc_main.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib
   LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\leapc_example.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marin\Documents\HRI_Seminar\build && "C:\Program Files\CMake\bin\cmake.exe" -E copy "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.dll" C:/Users/marin/Documents/HRI_Seminar/build"
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\leapc_example.dir\
   TARGET_FILE = leapc_example.exe
   TARGET_IMPLIB = libleapc_example.dll.a
-  TARGET_PDB = leapc_example.exe.dbg
+  TARGET_PDB = leapc_example.pdb
 
 # =============================================================================
 # Object build statements for OBJECT_LIBRARY target libExampleConnection
@@ -83,12 +79,13 @@ build leapc_example.exe: C_EXECUTABLE_LINKER__leapc_example_Debug CMakeFiles/lea
 
 build cmake_object_order_depends_target_libExampleConnection: phony || .
 
-build CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj: C_COMPILER__libExampleConnection_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/ExampleConnection.c || cmake_object_order_depends_target_libExampleConnection
+build CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj: C_COMPILER__libExampleConnection_unscanned_ C$:/Users/marin/Documents/HRI_Seminar/ExampleConnection.c || cmake_object_order_depends_target_libExampleConnection
   DEP_FILE = CMakeFiles\libExampleConnection.dir\ExampleConnection.c.obj.d
-  FLAGS = -g
   INCLUDES = -IC:/Users/marin/Documents/HRI_Seminar -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
   OBJECT_DIR = CMakeFiles\libExampleConnection.dir
   OBJECT_FILE_DIR = CMakeFiles\libExampleConnection.dir
+  TARGET_COMPILE_PDB = CMakeFiles\libExampleConnection.dir\
+  TARGET_PDB = ""
 
 
 
@@ -96,40 +93,6 @@ build CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj: C_COMPILER__l
 # Object library libExampleConnection
 
 build libExampleConnection: phony CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj
-
-# =============================================================================
-# Object build statements for EXECUTABLE target PollingSample
-
-
-#############################################
-# Order-only phony target for PollingSample
-
-build cmake_object_order_depends_target_PollingSample: phony || cmake_object_order_depends_target_libExampleConnection
-
-build CMakeFiles/PollingSample.dir/PollingSample.c.obj: C_COMPILER__PollingSample_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/PollingSample.c || cmake_object_order_depends_target_PollingSample
-  DEP_FILE = CMakeFiles\PollingSample.dir\PollingSample.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/marin/Documents/HRI_Seminar -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
-  OBJECT_DIR = CMakeFiles\PollingSample.dir
-  OBJECT_FILE_DIR = CMakeFiles\PollingSample.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target PollingSample
-
-
-#############################################
-# Link the executable PollingSample.exe
-
-build PollingSample.exe: C_EXECUTABLE_LINKER__PollingSample_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/PollingSample.dir/PollingSample.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
-  FLAGS = -g
-  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\PollingSample.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = PollingSample.exe
-  TARGET_IMPLIB = libPollingSample.dll.a
-  TARGET_PDB = PollingSample.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Seminar
@@ -140,12 +103,13 @@ build PollingSample.exe: C_EXECUTABLE_LINKER__PollingSample_Debug CMakeFiles/lib
 
 build cmake_object_order_depends_target_Seminar: phony || cmake_object_order_depends_target_libExampleConnection
 
-build CMakeFiles/Seminar.dir/Seminar.c.obj: C_COMPILER__Seminar_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/Seminar.c || cmake_object_order_depends_target_Seminar
+build CMakeFiles/Seminar.dir/Seminar.c.obj: C_COMPILER__Seminar_unscanned_ C$:/Users/marin/Documents/HRI_Seminar/Seminar.c || cmake_object_order_depends_target_Seminar
   DEP_FILE = CMakeFiles\Seminar.dir\Seminar.c.obj.d
-  FLAGS = -g
   INCLUDES = -IC:/Users/marin/Documents/HRI_Seminar -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
   OBJECT_DIR = CMakeFiles\Seminar.dir
   OBJECT_FILE_DIR = CMakeFiles\Seminar.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Seminar.dir\
+  TARGET_PDB = Seminar.pdb
 
 
 # =============================================================================
@@ -155,49 +119,15 @@ build CMakeFiles/Seminar.dir/Seminar.c.obj: C_COMPILER__Seminar_unscanned_Debug 
 #############################################
 # Link the executable Seminar.exe
 
-build Seminar.exe: C_EXECUTABLE_LINKER__Seminar_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/Seminar.dir/Seminar.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
-  FLAGS = -g
+build Seminar.exe: C_EXECUTABLE_LINKER__Seminar_ CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/Seminar.dir/Seminar.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
   LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Seminar.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\Seminar.dir\
   TARGET_FILE = Seminar.exe
   TARGET_IMPLIB = libSeminar.dll.a
-  TARGET_PDB = Seminar.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target Seminar2
-
-
-#############################################
-# Order-only phony target for Seminar2
-
-build cmake_object_order_depends_target_Seminar2: phony || cmake_object_order_depends_target_libExampleConnection
-
-build CMakeFiles/Seminar2.dir/Seminar2.c.obj: C_COMPILER__Seminar2_unscanned_Debug C$:/Users/marin/Documents/HRI_Seminar/Seminar2.c || cmake_object_order_depends_target_Seminar2
-  DEP_FILE = CMakeFiles\Seminar2.dir\Seminar2.c.obj.d
-  FLAGS = -g
-  INCLUDES = -IC:/Users/marin/Documents/HRI_Seminar -isystem "C:/Program Files/Ultraleap/LeapSDK/include"
-  OBJECT_DIR = CMakeFiles\Seminar2.dir
-  OBJECT_FILE_DIR = CMakeFiles\Seminar2.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Seminar2
-
-
-#############################################
-# Link the executable Seminar2.exe
-
-build Seminar2.exe: C_EXECUTABLE_LINKER__Seminar2_Debug CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj CMakeFiles/Seminar2.dir/Seminar2.c.obj | C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib || libExampleConnection
-  FLAGS = -g
-  LINK_LIBRARIES = "C:/Program Files/Ultraleap/LeapSDK/lib/x64/LeapC.lib"  -lwsock32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Seminar2.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Seminar2.exe
-  TARGET_IMPLIB = libSeminar2.dll.a
-  TARGET_PDB = Seminar2.exe.dbg
+  TARGET_PDB = Seminar.pdb
 
 
 #############################################
@@ -226,11 +156,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build PollingSample: phony PollingSample.exe
-
 build Seminar: phony Seminar.exe
-
-build Seminar2: phony Seminar2.exe
 
 build leapc_example: phony leapc_example.exe
 
@@ -242,7 +168,7 @@ build leapc_example: phony leapc_example.exe
 #############################################
 # Folder: C:/Users/marin/Documents/HRI_Seminar/build
 
-build all: phony leapc_example.exe libExampleConnection PollingSample.exe Seminar.exe Seminar2.exe
+build all: phony leapc_example.exe libExampleConnection Seminar.exe
 
 # =============================================================================
 # Built-in targets
@@ -251,14 +177,14 @@ build all: phony leapc_example.exe libExampleConnection PollingSample.exe Semina
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-config.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-configVersion.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets-relwithdebinfo.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets.cmake C$:/Users/marin/Documents/HRI_Seminar/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeRCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-config.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-configVersion.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets-relwithdebinfo.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets.cmake C$:/Users/marin/Documents/HRI_Seminar/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeRCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-config.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-configVersion.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets-relwithdebinfo.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets.cmake C$:/Users/marin/Documents/HRI_Seminar/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeRCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-config.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-configVersion.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets-relwithdebinfo.cmake C$:/Program$ Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets.cmake C$:/Users/marin/Documents/HRI_Seminar/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeRCCompiler.cmake CMakeFiles/3.30.0-rc3/CMakeSystem.cmake: phony
 
 
 #############################################
